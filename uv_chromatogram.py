@@ -35,7 +35,7 @@ def open_raw(path):
     RawFileReader
     """
     raw_file_reader = RawFileReader.RawFileReaderAdapter.FileFactory(path)
-    raw_file_reader.SelectInstrument(Business.Device.MS, 1)
+    raw_file_reader.SelectInstrument(Business.Device.UV, 1)
     return raw_file_reader
 
 
