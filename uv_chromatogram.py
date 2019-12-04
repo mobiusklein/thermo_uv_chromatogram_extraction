@@ -76,7 +76,7 @@ def load_chromatogram(raw_file_reader):
 def main(raw_file_path, output_path):
     raw_file = open_raw(raw_file_path)
     time, intensity = load_chromatogram(raw_file)
-    with open(output_path, 'wb') as fh:
+    with open(output_path, 'w') as fh:
         writer = csv.writer(fh)
         writer.writerow(['time', 'intensity'])
         writer.writerows(zip(time, intensity))
