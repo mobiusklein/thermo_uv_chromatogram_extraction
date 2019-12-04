@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+cp ../uv_chromatogram.py .
+docker build --tag docker-uv-chromatogram-extraction  .
+rm uv_chromatogram.py
